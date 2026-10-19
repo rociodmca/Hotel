@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { checkPassword, createSession, adminPasswordConfigured } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   if (!adminPasswordConfigured()) {
     return NextResponse.json(

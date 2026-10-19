@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { canTransition, isBookingStatus, statusLabels } from "@/lib/booking-status";
 
+export const dynamic = "force-dynamic";
+
 export async function PATCH(
   request: Request,
   { params }: { params: { id: string } }

@@ -6,6 +6,8 @@ import { applySeason } from "@/lib/pricing";
 import { sendBookingConfirmation } from "@/lib/email";
 import { notifyBookingByWhatsApp } from "@/lib/whatsapp";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const rooms = await prisma.room.findMany({ orderBy: { basePrice: "asc" } });
   return NextResponse.json({ rooms });
