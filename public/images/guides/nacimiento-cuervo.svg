@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Nacimiento del Río Cuervo: cascadas y pasarelas entre hayedos">
+  <defs>
+    <linearGradient id="skyG3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cde3d6"/>
+      <stop offset="100%" stop-color="#eef3e6"/>
+    </linearGradient>
+    <linearGradient id="fallG3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eaf6f8"/>
+      <stop offset="100%" stop-color="#a9cfd8"/>
+    </linearGradient>
+    <linearGradient id="poolG3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9fc6cf"/>
+      <stop offset="100%" stop-color="#66a0ab"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#skyG3)"/>
+  <!-- cliff -->
+  <path d="M0 0 L260 0 L340 120 L300 340 L360 560 L0 560 Z" fill="#7d8a6e"/>
+  <path d="M800 0 L560 0 L520 140 L560 360 L520 560 L800 560 Z" fill="#6f7d60"/>
+  <!-- moss -->
+  <g fill="#5c7a4e">
+    <ellipse cx="250" cy="180" rx="40" ry="18"/>
+    <ellipse cx="300" cy="300" rx="46" ry="20"/>
+    <ellipse cx="560" cy="220" rx="40" ry="18"/>
+  </g>
+  <!-- waterfall -->
+  <path d="M360 140 L480 140 L470 380 L370 380 Z" fill="url(#fallG3)"/>
+  <g stroke="#ffffff" stroke-width="3" opacity="0.7">
+    <path d="M390 150 L388 370"/>
+    <path d="M420 150 L420 370"/>
+    <path d="M450 150 L452 370"/>
+  </g>
+  <!-- pool -->
+  <ellipse cx="420" cy="440" rx="260" ry="70" fill="url(#poolG3)"/>
+  <!-- boardwalk -->
+  <g fill="#8a6b45" stroke="#5d4023" stroke-width="3">
+    <rect x="120" y="430" width="240" height="16" rx="4"/>
+    <rect x="140" y="420" width="10" height="40"/>
+    <rect x="240" y="420" width="10" height="40"/>
+    <rect x="330" y="420" width="10" height="40"/>
+  </g>
+  <!-- trees -->
+  <g fill="#4b7647">
+    <circle cx="90" cy="300" r="46"/>
+    <circle cx="160" cy="260" r="36"/>
+    <circle cx="720" cy="320" r="50"/>
+    <circle cx="650" cy="280" r="34"/>
+  </g>
+</svg>

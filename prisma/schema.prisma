@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+enum RoomType {
+  STANDARD
+  SUPERIOR
+  SUITE
+  RURAL_HOUSE
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+  CHECKED_IN
+  CHECKED_OUT
+}
+
+enum RoomHousekeepingStatus {
+  CLEAN
+  OCCUPIED
+  DIRTY
+  MAINTENANCE
+}
+
+model Room {
+  id              String                @id @default(uuid())
+  title           String
+  slug            String                @unique
+  type            RoomType
+  description     String?
+  basePrice       Decimal               @db.Decimal(10, 2)
+  capacity        Int
+  amenities       String[]
+  images          String[]
+  housekeeping    RoomHousekeepingStatus @default(CLEAN)
+  bookings        Booking[]
+  rates           SeasonRate[]
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  @@map("rooms")
+}
+
+model Booking {
+  id           String        @id @default(uuid())
+  roomId       String
+  room         Room          @relation(fields: [roomId], references: [id])
+  guestName    String
+  guestEmail   String
+  guestPhone   String
+  checkIn      DateTime      @db.Date
+  checkOut     DateTime      @db.Date
+  guests       Int           @default(1)
+  totalPrice   Decimal       @db.Decimal(10, 2)
+  status       BookingStatus @default(PENDING)
+  notes        String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+
+  @@index([roomId, checkIn, checkOut])
+  @@map("bookings")
+}
+
+model SeasonRate {
+  id        String   @id @default(uuid())
+  roomId    String
+  room      Room     @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  name      String
+  startDate DateTime @db.Date
+  endDate   DateTime @db.Date
+  price     Decimal  @db.Decimal(10, 2)
+
+  @@map("season_rates")
+}

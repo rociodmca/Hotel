@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Paisaje estilizado de la Serranía de Cuenca al atardecer">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3d9a8"/>
+      <stop offset="38%" stop-color="#e7b878"/>
+      <stop offset="68%" stop-color="#c98a63"/>
+      <stop offset="100%" stop-color="#7a5a4e"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.72" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff4dc" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#f6cf94" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f6cf94" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a8f7e"/>
+      <stop offset="100%" stop-color="#6f7a68"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4b6b48"/>
+      <stop offset="100%" stop-color="#37543a"/>
+    </linearGradient>
+    <linearGradient id="near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2c4a2e"/>
+      <stop offset="100%" stop-color="#172c19"/>
+    </linearGradient>
+    <filter id="haze">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect width="1600" height="1000" fill="url(#sun)"/>
+
+  <!-- sun -->
+  <circle cx="1150" cy="470" r="70" fill="#fff6e2" opacity="0.9" filter="url(#haze)"/>
+  <circle cx="1150" cy="470" r="46" fill="#fffaf0"/>
+
+  <!-- clouds -->
+  <g fill="#f7e3bd" opacity="0.5" filter="url(#haze)">
+    <ellipse cx="420" cy="220" rx="220" ry="26"/>
+    <ellipse cx="900" cy="160" rx="300" ry="22"/>
+    <ellipse cx="1320" cy="260" rx="240" ry="20"/>
+  </g>
+
+  <!-- far mountain range -->
+  <path d="M0 640 L160 560 L300 610 L470 500 L620 590 L760 520 L900 600 L1060 500 L1220 590 L1360 520 L1600 610 L1600 1000 L0 1000 Z" fill="url(#far)" opacity="0.55"/>
+
+  <!-- mid range -->
+  <path d="M0 720 L180 640 L340 700 L520 600 L700 690 L880 610 L1060 700 L1240 620 L1420 700 L1600 640 L1600 1000 L0 1000 Z" fill="url(#mid)"/>
+
+  <!-- rock formations (Ciudad Encantada hint) -->
+  <g fill="#3f5c3d">
+    <path d="M980 690 l30 -70 l24 6 l14 -46 l20 4 l8 40 l22 -2 l10 68 z"/>
+    <path d="M1120 700 l22 -54 l18 4 l10 -34 l16 3 l6 30 l16 -2 l8 53 z"/>
+  </g>
+
+  <!-- near ridge with pine silhouettes -->
+  <path d="M0 800 L200 740 L400 800 L600 730 L820 810 L1040 745 L1260 820 L1480 760 L1600 800 L1600 1000 L0 1000 Z" fill="url(#near)"/>
+
+  <!-- pine trees -->
+  <g fill="#132614">
+    <g transform="translate(140,720) scale(1.1)">
+      <rect x="-3" y="34" width="6" height="16"/>
+      <path d="M0 -14 L16 34 L-16 34 Z"/>
+      <path d="M0 2 L20 40 L-20 40 Z"/>
+    </g>
+    <g transform="translate(300,760) scale(0.9)">
+      <rect x="-3" y="34" width="6" height="14"/>
+      <path d="M0 -14 L15 34 L-15 34 Z"/>
+      <path d="M0 2 L19 40 L-19 40 Z"/>
+    </g>
+    <g transform="translate(1360,780) scale(1.2)">
+      <rect x="-3" y="34" width="6" height="16"/>
+      <path d="M0 -14 L16 34 L-16 34 Z"/>
+      <path d="M0 2 L20 40 L-20 40 Z"/>
+    </g>
+    <g transform="translate(1480,760) scale(0.95)">
+      <rect x="-3" y="34" width="6" height="14"/>
+      <path d="M0 -14 L15 34 L-15 34 Z"/>
+      <path d="M0 2 L19 40 L-19 40 Z"/>
+    </g>
+  </g>
+
+  <!-- foreground meadow -->
+  <path d="M0 900 Q400 860 800 900 T1600 890 L1600 1000 L0 1000 Z" fill="#10210f"/>
+</svg>

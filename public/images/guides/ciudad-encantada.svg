@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ciudad Encantada: formaciones kársticas del Parque Natural de la Serranía de Cuenca">
+  <defs>
+    <linearGradient id="skyG2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cfe4ec"/>
+      <stop offset="100%" stop-color="#eef1e0"/>
+    </linearGradient>
+    <linearGradient id="rockG2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9b393"/>
+      <stop offset="100%" stop-color="#8f7a5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#skyG2)"/>
+  <circle cx="180" cy="120" r="44" fill="#fff3d6"/>
+  <!-- distant rocks -->
+  <path d="M0 400 L120 340 L240 400 L360 330 L500 400 L640 340 L800 400 L800 560 L0 560 Z" fill="#b7a482" opacity="0.6"/>
+  <!-- main karst formations -->
+  <g fill="url(#rockG2)" stroke="#7d6a4e" stroke-width="4">
+    <path d="M160 460 q-20 -140 20 -190 q20 -30 40 0 q40 50 20 190 z"/>
+    <path d="M260 470 q-14 -180 30 -230 q26 -30 46 10 q34 60 10 220 z"/>
+    <path d="M420 460 q-24 -120 18 -170 q22 -28 44 4 q36 46 14 166 z"/>
+    <path d="M540 470 q-20 -150 24 -200 q24 -30 44 2 q38 52 16 198 z"/>
+  </g>
+  <!-- grass -->
+  <path d="M0 500 Q200 470 400 500 T800 495 L800 560 L0 560 Z" fill="#6f8f5f"/>
+  <g fill="#4b7647">
+    <ellipse cx="90" cy="510" rx="30" ry="12"/>
+    <ellipse cx="700" cy="515" rx="34" ry="13"/>
+  </g>
+  <!-- bird -->
+  <path d="M600 140 q14 -12 28 0 q14 -12 28 0" stroke="#5a6b7a" stroke-width="4" fill="none"/>
+</svg>
